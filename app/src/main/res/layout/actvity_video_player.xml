@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:auto_show="false"
+        android:clickable="false"
+        app:resize_mode="fit"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:use_controller="false"
+        android:id="@+id/player"
+        >
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toucher"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@+id/bottomview"
+                android:background="@android:color/transparent"
+                android:clickable="true"
+                android:longClickable="false"
+                app:layout_constraintBottom_toTopOf="@+id/bottomview"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/volumecontainer"
+                    android:layout_width="36dp"
+                    android:layout_height="160dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/roundview"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.techo.chattv.utils.SoundView
+                        android:id="@+id/volumeview"
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="40dp"
+                        app:cornerRadius="1.5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:maxprogress="15"
+                        app:progesscolor="#FFE57F"
+                        app:progress="0"
+                        app:viewbackgroundcolor="#8C8C8C" />
+
+                    <ImageView
+                        android:id="@+id/volumeicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/volumeview"
+                        app:srcCompat="@drawable/ic_baseline_volume_off_24" />
+
+                    <TextView
+                        android:id="@+id/progresstext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_regular"
+                        app:layout_constraintBottom_toTopOf="@+id/volumeview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/brightcontainer"
+                    android:layout_width="36dp"
+                    android:layout_height="160dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/roundview"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.techo.chattv.utils.SoundView
+                        android:id="@+id/brightview"
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="40dp"
+                        app:cornerRadius="1.5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:maxprogress="15"
+                        app:progesscolor="#FFE57F"
+                        app:progress="0"
+                        app:viewbackgroundcolor="#8C8C8C" />
+
+                    <ImageView
+                        android:id="@+id/brighticon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/brightview"
+                        app:srcCompat="@drawable/brightne" />
+
+                    <TextView
+                        android:id="@+id/brightprogresstext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/brightview"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradientbg"
+                android:padding="6dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/backarrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_arrow_back"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/videotitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="16dp"
+                    android:maxLines="2"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/app_name"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/backarrow"
+                    app:layout_constraintLeft_toRightOf="@+id/backarrow"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/backarrow" />
+
+                <RelativeLayout
+                    android:id="@+id/speedbtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/roundbg"
+                    app:layout_constraintStart_toStartOf="@+id/backarrow"
+                    app:layout_constraintTop_toBottomOf="@+id/backarrow">
+
+                    <TextView
+                        android:id="@+id/speedBtnTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center"
+                        android:text="1x"
+                        android:textColor="@color/white"
+                        android:textSize="16sp">
+
+                    </TextView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rotateview"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/roundbg"
+                    app:layout_constraintLeft_toRightOf="@+id/speedbtn"
+                    app:layout_constraintTop_toBottomOf="@+id/backarrow">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/ic_rotate_screen">
+
+                    </ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/muteview"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/roundbg"
+                    app:layout_constraintLeft_toRightOf="@+id/rotateview"
+                    app:layout_constraintTop_toBottomOf="@+id/backarrow">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:src="@drawable/ic_baseline_volume_off_24">
+
+                    </ImageView>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/exo_favorite_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/roundbg"
+                    app:layout_constraintLeft_toRightOf="@+id/rotateview"
+                    app:layout_constraintStart_toEndOf="@+id/muteview"
+                    app:layout_constraintTop_toBottomOf="@+id/backarrow">
+
+                    <ImageView
+                        android:id="@+id/exo_favorite_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:src="@drawable/ic_baseline_volume_off_24">
+
+                    </ImageView>
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/seeklay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/seektime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@android:color/white"
+                    android:textSize="42sp" />
+
+                <TextView
+                    android:id="@+id/seekdelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="[00:00]"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/speedview"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/roundview"
+                android:clickable="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/bottomview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Speed"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/speedtextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="12dp"
+                    android:text="1X"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <SeekBar
+                    android:id="@+id/speedseekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="16dp"
+                    android:max="10"
+                    android:maxHeight="5dp"
+                    android:min="0"
+                    android:progressDrawable="@drawable/seekbar_progress_style"
+                    android:progressTint="#FFE57F"
+                    android:theme="@style/SeekBarWithoutSteps"
+                    android:thumb="@drawable/thumb_image"
+                    app:tickColor="@android:color/holo_red_dark" />
+            </RelativeLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottomview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/gradientbottom"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/banner_frame_lay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/currentprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dragseek"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/dragseek" />
+
+                <SeekBar
+                    android:id="@+id/dragseek"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:maxHeight="4dp"
+                    android:progressDrawable="@drawable/seekbar_progress_style"
+                    android:thumb="@drawable/thumb_image"
+                    android:thumbOffset="0dp"
+                    app:layout_constraintEnd_toStartOf="@+id/endprogress"
+                    app:layout_constraintStart_toEndOf="@+id/currentprogress"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/endprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="00:00"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/dragseek"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/dragseek" />
+
+                <ImageView
+                    android:id="@+id/imageButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_baseline_play_arrow_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dragseek" />
+
+                <ImageView
+                    android:id="@+id/playNext"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_baseline_skip_next_24"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+                <ImageView
+                    android:id="@+id/playPrevious"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_baseline_skip_previous_24"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+                <ImageView
+                    android:id="@+id/aspectbtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:padding="13dp"
+                    android:src="@drawable/ic_fit_to_screen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+                <ImageView
+                    android:id="@+id/lockbtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="12dp"
+                    android:padding="13dp"
+                    android:src="@drawable/ic_baseline_lock_open_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/banner_frame_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/aspecttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="42sp"
+                android:fontFamily="@font/poppins_regular"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/continuelay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/roundbg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="12dp"
+                    android:src="@drawable/ic_baseline_close_24" />
+
+                <TextView
+                    android:id="@+id/continuetextid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="Continue from\nwhere you stopped."
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/toucher"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_above="@+id/bottomview"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:clickable="true"-->
+<!--            android:longClickable="false">-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/volumecontainer"-->
+<!--                android:layout_width="45dp"-->
+<!--                android:layout_height="180dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginEnd="24dp"-->
+<!--                android:background="@drawable/roundview"-->
+<!--                android:visibility="invisible"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <com.globle.iptvvideoplayer.utils.SoundView-->
+<!--                    android:id="@+id/volumeview"-->
+<!--                    android:layout_width="3dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:layout_marginBottom="40dp"-->
+<!--                    app:cornerRadius="1.5dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:maxprogress="15"-->
+<!--                    app:progesscolor="#FFE57F"-->
+<!--                    app:progress="0"-->
+<!--                    app:viewbackgroundcolor="#8C8C8C" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/volumeicon"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/volumeview"-->
+<!--                    app:srcCompat="@drawable/ic_baseline_volume_off_24" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/progresstext"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/volumeview"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+
+<!--                    />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:id="@+id/brightcontainer"-->
+<!--                android:layout_width="45dp"-->
+<!--                android:layout_height="180dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="24dp"-->
+<!--                android:background="@drawable/roundview"-->
+<!--                android:visibility="invisible"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                <com.globle.iptvvideoplayer.utils.SoundView-->
+<!--                    android:id="@+id/brightview"-->
+<!--                    android:layout_width="3dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:layout_marginBottom="40dp"-->
+<!--                    app:cornerRadius="1.5dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:maxprogress="15"-->
+<!--                    app:progesscolor="#FFE57F"-->
+<!--                    app:progress="0"-->
+<!--                    app:viewbackgroundcolor="#8C8C8C" />-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/brighticon"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/brightview"-->
+<!--                    app:srcCompat="@drawable/brightne" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/brightprogresstext"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="0"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textSize="20sp"-->
+<!--                    app:layout_constraintBottom_toTopOf="@+id/brightview"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+
+<!--                    />-->
+
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="110dp"-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:visibility="invisible"-->
+<!--            android:background="@drawable/gradientbg"-->
+<!--            >-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/backarrow"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:src="@drawable/ic_arrow_back"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintVertical_bias="0.2" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="@string/app_name"-->
+<!--                android:maxLines="2"-->
+<!--                android:id="@+id/videotitle"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="16sp"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/backarrow"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/backarrow"-->
+<!--                app:layout_constraintLeft_toRightOf="@+id/backarrow"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                android:layout_marginLeft="24dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                />-->
+
+<!--            <Button-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                app:layout_constraintLeft_toLeftOf="@+id/backarrow"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/backarrow"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:background="@drawable/roundbg"-->
+<!--                android:text="1x"-->
+<!--                android:id="@+id/speedbtn"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="18sp"-->
+<!--                />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:id="@+id/rotateview"-->
+<!--                app:layout_constraintLeft_toRightOf="@+id/speedbtn"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/backarrow"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:background="@drawable/roundbg"-->
+<!--                >-->
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="7dp"-->
+<!--                    android:src="@drawable/ic_rotate_screen"-->
+<!--                    >-->
+
+<!--                </ImageView>-->
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:id="@+id/muteview"-->
+<!--                app:layout_constraintLeft_toRightOf="@+id/rotateview"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/backarrow"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:background="@drawable/roundbg"-->
+<!--                >-->
+<!--                <ImageView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="7dp"-->
+<!--                    android:src="@drawable/ic_baseline_volume_off_24"-->
+<!--                    >-->
+
+<!--                </ImageView>-->
+<!--            </RelativeLayout>-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center"-->
+<!--            android:id="@+id/seeklay"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="00:00"-->
+<!--                android:id="@+id/seektime"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="55sp"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="[00:00]"-->
+<!--                android:id="@+id/seekdelay"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="30sp"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="90dp"-->
+<!--            android:background="@drawable/roundview"-->
+<!--            android:layout_marginLeft="12dp"-->
+<!--            android:id="@+id/speedview"-->
+<!--            android:layout_marginRight="12dp"-->
+<!--            android:visibility="gone"-->
+<!--            android:clickable="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="80dp"-->
+<!--            >-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:textSize="16sp"-->
+<!--                android:text="Speed"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:textSize="16sp"-->
+<!--                android:text="1X"-->
+<!--                android:id="@+id/speedtextview"-->
+<!--                android:layout_marginTop="4dp"-->
+<!--                android:layout_marginRight="12dp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                />-->
+<!--            <SeekBar-->
+<!--                android:id="@+id/speedseekbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:min="0"-->
+<!--                android:max="10"-->
+<!--                android:maxHeight="5dp"-->
+<!--                android:progressTint="#FFE57F"-->
+<!--                app:tickColor="@android:color/holo_red_dark"-->
+<!--                android:thumb="@drawable/thumb_image"-->
+<!--                android:theme="@style/SeekBarWithoutSteps"-->
+<!--                android:progressDrawable="@drawable/seekbar_progress_style"-->
+<!--                />-->
+<!--        </RelativeLayout>-->
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/bottomview"-->
+<!--            android:visibility="visible"-->
+<!--            android:background="@drawable/gradientbottom"-->
+<!--            android:paddingTop="12dp"-->
+<!--            android:layout_alignParentBottom="true">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/currentprogress"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:text="00:00"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="16sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/dragseek"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/dragseek"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                />-->
+
+<!--            <SeekBar-->
+<!--                android:id="@+id/dragseek"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:maxHeight="4dp"-->
+<!--                android:progressDrawable="@drawable/seekbar_progress_style"-->
+<!--                android:thumb="@drawable/thumb_image"-->
+<!--                android:thumbOffset="0dp"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/endprogress"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/currentprogress"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/endprogress"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="00:00"-->
+<!--                android:textSize="16sp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/dragseek"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/dragseek"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imageButton"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginBottom="6dp"-->
+<!--                android:padding="4dp"-->
+<!--                android:src="@drawable/ic_baseline_play_arrow_24"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/dragseek" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/playNext"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/imageButton"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/imageButton"-->
+<!--                android:src="@drawable/ic_baseline_skip_next_24" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/playPrevious"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:padding="10dp"-->
+<!--                android:layout_marginRight="12dp"-->
+<!--                android:src="@drawable/ic_baseline_skip_previous_24"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/imageButton"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/imageButton" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/aspectbtn"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:padding="13dp"-->
+<!--                android:layout_marginRight="12dp"-->
+<!--                android:src="@drawable/ic_fit_to_screen"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/imageButton"-->
+<!--                />-->
+<!--            <ImageView-->
+<!--                android:id="@+id/lockbtn"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:padding="13dp"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:src="@drawable/ic_baseline_lock_open_24"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/imageButton"-->
+<!--                />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--        <FrameLayout-->
+<!--            android:id="@+id/banner_lay"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/bottomview" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:visibility="gone"-->
+<!--            android:layout_marginRight="16dp"-->
+<!--            android:layout_marginLeft="16dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:id="@+id/aspecttext"-->
+<!--            android:textColor="@android:color/white"-->
+<!--            android:textSize="55sp"-->
+<!--            />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@drawable/roundbg"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="gone"-->
+<!--            android:paddingTop="5dp"-->
+<!--            android:id="@+id/continuelay"-->
+<!--            android:paddingRight="8dp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginLeft="12dp"-->
+<!--            android:paddingBottom="5dp"-->
+<!--            >-->
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginLeft="12dp"-->
+<!--                android:src="@drawable/ic_baseline_close_24"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/continuetextid"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="14sp"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:text="Continue from\nwhere you stopped."-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/unlockbtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="13dp"
+        android:visibility="gone"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_baseline_lock_24"
+        />
+
+</RelativeLayout>

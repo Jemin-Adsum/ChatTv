@@ -1,0 +1,9 @@
+#EXTM3U
+#EXTINF:0 tvg-country="BD" tvg-logo="https://i.imgur.com/TjVJT22.png" group-title="Undefined",Channel-S
+https://a.jsrdn.com/r-373576a3/publish/22679_24MrQma9TX/index.m3u8?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BD" tvg-logo="" group-title="News",DBC News (1080p)
+https://live.jagobd.com:444/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/dbcnews.stream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MS8yMi8yMDIxIDM6MzQ6MjQgUE0maGFzaF92YWx1ZT1mdVdtWlhUaVZpZEZwbjg1cWQzZXRnPT0mdmFsaWRtaW51dGVzPTYw&checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BD" tvg-logo="" group-title="News",Ekusey TV
+http://210.4.72.204/hls-live/livepkgr/_definst_/liveevent/livestream3.m3u8?checkedby:iptvcat.com
+#EXTINF:0 tvg-country="BD;IN" tvg-logo="" group-title="News;Undefined",News 18 Bangla,News 18 Bengali
+https://news18bangla-lh.akamaihd.net/i/n18bangla_1@2289/index_4_av-p.m3u8?checkedby:iptvcat.com

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Chat TV</string>
+
+    <string name="main_page_title">Home</string>
+    <string name="favorite_page_title">Favorite</string>
+    <string name="about_page_title">About us</string>
+
+    <string name="info_file_select">You can import the list by selecting the m3u file.</string>
+
+    <string name="rationale_read_file">"You need to give permission to access files "</string>
+    <string name="returned_from_app_settings_to_activity">
+        Returned from app settings to MainActivity with the following permissions:
+        \n\nRead File: %s
+    </string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="error_file_read_exp">File read error please check m3u file</string>
+    <string name="error_save_list">Error writing list to local</string>
+    <string name="success_file_read">File read successfully</string>
+
+    <string name="search_hint">Search channel</string>
+
+    <string name="play">play</string>
+    <string name="pause">pause</string>
+    <string name="previous">previous</string>
+    <string name="next">next</string>
+    <string name="search">Search</string>
+    <string name="search_url_here">Search url here</string>
+    <string name="search_for_another_url">Search for another URL</string>
+    <string name="favourite_channels">Favourite Channels</string>
+    <string name="about_app">About App</string>
+    <string name="select_m3u_file_message">Please enter m3u file url</string>
+    <string name="file_not_download">File not download</string>
+    <string name="select_your_country">Select Your Country</string>
+    <string name="search_your_country">Search your country</string>
+    <string name="network_issue_message">Please check your network connection.</string>
+    <string name="your_country_not_found">Your country not found.</string>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Adsum 06/.gradle/caches/transforms-3/aa3a597d6bc7e9e37ae19fd51de34531/transformed/exoplayer-ui-2.15.1/res/drawable-anydpi-v21/exo_icon_next.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/border_bg.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/colorroundbg.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/dialog_bg.xml" value="0.12" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/gradientbg.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/gradientbottom.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_about.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_about_feel.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_arrow_back.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_close_24.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_crop_3_2_24.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_lock_24.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_lock_open_24.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_pause_24.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_play_arrow_24.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_skip_next_24.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_skip_previous_24.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_baseline_volume_off_24.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_favorite.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_favorite_null.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_fit_to_screen.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_home.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_image.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.175" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/ic_rotate_screen.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/roundbg.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/roundview.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/seekbar_progress.xml" value="0.174" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/seekbar_progress_style.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/seekbar_track.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable-v24/thumb_image.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/cat_music.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_about_feels.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_about_unfeel.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_fav_feel.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_fav_unfeel.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_home_feel.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_home_unfeel.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/ic_launcher_background.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/navigation_about.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/navigation_fav.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/navigation_home.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/drawable/splash_gradiant_bg.xml" value="0.125" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/activity_channel.xml" value="0.15" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/activity_file_load.xml" value="0.2" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/activity_file_select.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/activity_player.xml" value="0.22" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/activity_splash.xml" value="0.18" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/actvity_video_player.xml" value="0.2521631644004944" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/admob_native_layout.xml" value="0.13272543059777103" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/custom_exo_view.xml" value="0.25" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/dialog_exit.xml" value="0.16" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/dialog_pass_recovery.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/fragment_about_app.xml" value="0.25" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/fragment_categories.xml" value="0.22" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/fragment_favorite.xml" value="0.25" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/item_category.xml" value="0.25" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/item_channel_list.xml" value="0.22" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/item_country_list.xml" value="0.25" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/item_native_ad.xml" value="0.23550724637681159" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/item_search.xml" value="0.1" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/itrm_category.xml" value="0.25" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/layout/native_ad_view.xml" value="0.13272543059777103" />
+        <entry key="..\:/Users/Adsum 06/AndroidStudioProjects/IPTVVideoPlayer/app/src/main/res/menu/menu_bottom_bar.xml" value="0.27291666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

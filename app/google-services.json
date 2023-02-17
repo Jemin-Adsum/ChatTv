@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "929350035108",
+    "project_id": "wifi-password-2ccc9",
+    "storage_bucket": "wifi-password-2ccc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929350035108:android:658090716c637f47e86831",
+        "android_client_info": {
+          "package_name": "com.adsum.chatgpt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929350035108-htcljcsmr1kh4cdskgb2m1sqhd4phjih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe3kUBexsCCX0o-5b0iLCKBGObSx8U9Rs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929350035108-htcljcsmr1kh4cdskgb2m1sqhd4phjih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929350035108:android:d8047edb10efc478e86831",
+        "android_client_info": {
+          "package_name": "com.techo.chattv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929350035108-4s5vuku18l2h7ot03u1f7nim9vd8ji9m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techo.chattv",
+            "certificate_hash": "ab505cd492864c5298d656459bbdad3a31143281"
+          }
+        },
+        {
+          "client_id": "929350035108-htcljcsmr1kh4cdskgb2m1sqhd4phjih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe3kUBexsCCX0o-5b0iLCKBGObSx8U9Rs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929350035108-htcljcsmr1kh4cdskgb2m1sqhd4phjih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929350035108:android:09463e52d97da525e86831",
+        "android_client_info": {
+          "package_name": "com.techo.wifipassword"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929350035108-289nm6rl2intd9jd12mnbpkl62foc3g6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.techo.wifipassword",
+            "certificate_hash": "ab505cd492864c5298d656459bbdad3a31143281"
+          }
+        },
+        {
+          "client_id": "929350035108-htcljcsmr1kh4cdskgb2m1sqhd4phjih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe3kUBexsCCX0o-5b0iLCKBGObSx8U9Rs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929350035108-htcljcsmr1kh4cdskgb2m1sqhd4phjih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
