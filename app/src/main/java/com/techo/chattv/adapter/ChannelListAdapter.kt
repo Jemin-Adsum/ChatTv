@@ -23,18 +23,8 @@ class ChannelListAdapter(private val context: Activity, val channelList: List<Ch
 
     var onChannelClick: (channel: Channel, position: Int) -> Unit = { channel: Channel, i: Int -> }
     var ad = 0
-    var thiscontext = context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-//        return if (viewType == SHOW_ADS) {
-//            val view: View =
-//                LayoutInflater.from(context).inflate(R.layout.item_native_ad, parent, false)
-//            MyViewHolderAd(view)
-//        } else {
-//            val view: View =
-//                LayoutInflater.from(context).inflate(R.layout.item_channel_list, parent, false)
-//            MyViewHolder(view)
-//        }
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_channel_list, parent, false)
         return MyViewHolder(view)
@@ -101,18 +91,6 @@ class ChannelListAdapter(private val context: Activity, val channelList: List<Ch
         val channelListRowId = itemView.findViewById(R.id.channelListRowId) as TextView
         val channelListRowName = itemView.findViewById(R.id.channelListRowName) as TextView
         val channelLay = itemView.findViewById(R.id.channel_lay) as CardView
-    }
-
-    class MyViewHolderAd(view: View) : RecyclerView.ViewHolder(view) {
-        val nativeRelativeLay = itemView.findViewById(R.id.native_relative_lay) as RelativeLayout
-    }
-
-    private fun adShow(layout: RelativeLayout){
-        if (layout.visibility == View.GONE){
-            Log.e("adShow","false")
-        } else {
-            NativeAds().loadNativeFBAd(thiscontext,layout)
-        }
     }
 
     companion object {

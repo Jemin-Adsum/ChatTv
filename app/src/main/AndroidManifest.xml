@@ -19,7 +19,7 @@
         <activity
             android:name=".ui.activity.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.Transparent.StatusBar">
+            android:theme="@style/splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,6 +37,10 @@
 
         <activity
             android:name=".ui.activity.ChannelActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".ui.activity.PrivacyPolicy"
             android:exported="true" />
 
         <activity android:name=".ui.activity.VideoPlayerActivity"

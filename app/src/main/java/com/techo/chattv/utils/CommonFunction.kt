@@ -9,20 +9,24 @@ import android.graphics.drawable.ColorDrawable
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.view.Gravity
+import android.view.View
 import android.view.Window
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.PopupMenu
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
 import com.google.android.exoplayer2.util.Log
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 import com.google.gson.Gson
+import com.techo.chattv.BuildConfig
 import com.techo.chattv.R
 import com.techo.chattv.model.Ads
 import com.techo.chattv.ui.activity.CountrySelectActivity
+import com.techo.chattv.ui.activity.PrivacyPolicy
 import java.util.*
 
 class CommonFunction {
@@ -35,9 +39,13 @@ class CommonFunction {
         mFirebaseRemoteConfig.setConfigSettingsAsync(configSettings)
         mFirebaseRemoteConfig.fetchAndActivate().addOnCompleteListener(activity) { task ->
             if (task.isSuccessful) {
+                val url = mFirebaseRemoteConfig.getString(Constants.PRIVACY_POLICY)
+                SaveSharedPreference(activity).setPrivacyPolicy(activity,url)
                 val stringJson = mFirebaseRemoteConfig.getString(Constants.CHAT_TV_ADS)
                 if (stringJson.isNotEmpty()) {
+                    Log.e("SET DATA","DONE")
                     val adsModel = Gson().fromJson(stringJson, Ads::class.java)
+                    Log.e("ADS MODEL",adsModel.toString())
                     SaveSharedPreference(activity).setAds(
                         activity,
                         adsModel.isAdsShow,
@@ -123,5 +131,40 @@ class CommonFunction {
             }
         }
         return false
+    }
+    fun showSideMenu(v: View,activity: Activity,interstitialAds : InterstitialAds) {
+        PopupMenu(activity, v).apply {
+            setOnMenuItemClickListener { item ->
+                when (item?.itemId) {
+                    R.id.share_settings -> {
+                        try {
+                            val shareIntent = Intent(Intent.ACTION_SEND)
+                            shareIntent.type = "text/plain"
+                            shareIntent.putExtra(Intent.EXTRA_SUBJECT, activity.getString(R.string.app_name))
+                            var shareMessage = activity.getString(R.string.share_app_message)
+                            val playStoreLink = activity.getString(R.string.play_store_link)
+                            shareMessage =
+                                """
+                                            ${shareMessage}$playStoreLink${BuildConfig.APPLICATION_ID}
+
+                                            """.trimIndent()
+                            shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage)
+                            activity.startActivity(Intent.createChooser(shareIntent, Constants.CHOOSE_ONE))
+                        } catch (e: Exception) {
+                            //e.toString();
+                        }
+                        true
+                    }
+                    R.id.privacy_settings -> {
+                        val intent = Intent(activity, PrivacyPolicy::class.java)
+                        interstitialAds.onStartOtherActivity(intent)
+                        true
+                    }
+                    else -> false
+                }
+            }
+            inflate(R.menu.menu_main)
+            show()
+        }
     }
 }

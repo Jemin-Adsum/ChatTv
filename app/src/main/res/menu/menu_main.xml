@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.techo.wifipassword.ui.activity.MainActivity">
+    <item
+        android:id="@+id/share_settings"
+        android:title="Share with friends"
+        app:showAsAction="collapseActionView" />
+<!--    <item-->
+<!--        android:id="@+id/google_settings"-->
+<!--        android:title="Google Account Sign-in"-->
+<!--        app:showAsAction="collapseActionView" />-->
+    <item
+        android:id="@+id/privacy_settings"
+        android:title="Privacy Policy"
+        app:showAsAction="collapseActionView" />
+</menu>

@@ -13,6 +13,8 @@ object Constants {
     val FB_NATIVE_BANNER_AD = "fb_native_banner_ad"
     val FB_INTERSTITIAL_AD= "fb_interstitial_ad"
     val ADS_SHOW_COUNT= "ads_show_count"
+    val PRIVACY_POLICY = "chattv_privacy_policy"
+    val CHOOSE_ONE = "choose one"
 
     val CATEGORY = "category"
     val CHANNEL = "channel"

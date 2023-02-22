@@ -18,10 +18,22 @@
             android:id="@+id/mainChannelSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/poppins_bold"
             android:textColor="@color/white"
-            android:textSize="16sp"
+            android:textSize="18sp"
             android:text="@string/about_app"/>
+
+        <ImageView
+            android:id="@+id/sideMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:padding="6dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_side_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.appcompat.widget.Toolbar>
 

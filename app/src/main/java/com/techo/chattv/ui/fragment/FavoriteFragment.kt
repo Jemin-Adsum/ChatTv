@@ -13,6 +13,7 @@ import com.techo.chattv.adapter.ChannelListAdapter
 import com.techo.chattv.databinding.FragmentFavoriteBinding
 import com.techo.chattv.model.ChannelList
 import com.techo.chattv.ui.activity.VideoPlayerActivity
+import com.techo.chattv.utils.CommonFunction
 import com.techo.chattv.utils.InterstitialAds
 import com.techo.chattv.utils.NativeAds
 import com.techo.chattv.viewmodel.FavoriteViewModel
@@ -83,6 +84,10 @@ class FavoriteFragment : Fragment() {
                 intent.putExtra("list", channel)
                 interstitialAds.onStartOtherActivity(intent)
             }
+        }
+
+        binding.sideMenu.setOnClickListener {
+            CommonFunction().showSideMenu(it,requireActivity(),interstitialAds)
         }
     }
 

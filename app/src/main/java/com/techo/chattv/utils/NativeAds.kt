@@ -260,7 +260,7 @@ class NativeAds {
                         if (isAdmob) {
                             banner_ad?.let { loadAdMobBannerAd(context, layNative, it) }
                         } else {
-                            Log.e("isFacebookAds", isFacebookAds.toString())
+                            Log.e("isAdmob", isAdmob.toString())
                         }
                     }
 
@@ -292,7 +292,7 @@ class NativeAds {
             } else if (isAdmob) {
                 banner_ad?.let { loadAdMobBannerAd(context, layNative, it) }
             } else {
-                Log.e("both", isFacebookAds.toString())
+                Log.e("both", isAdsShow.toString())
             }
         } else {
             Log.e(Constants.IS_ADS_SHOW, isAdsShow.toString())

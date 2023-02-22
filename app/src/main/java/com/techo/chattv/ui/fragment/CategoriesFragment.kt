@@ -41,9 +41,7 @@ class CategoriesFragment : Fragment() {
     private var mViewModel: CategoriesViewModel? = null
     private lateinit var adapter: CategoryAdapter
     private lateinit var searchAdapter: SearchAdapter
-//    var searchCon: ConstraintLayout? = null
     private var ipTvRealm: IPTvRealm? = null
-    var fileDownloadStarted = false
     var url = ""
     private lateinit var interstitialAds : InterstitialAds
 
@@ -111,6 +109,10 @@ class CategoriesFragment : Fragment() {
                 return false
             }
         })
+
+        binding.sideMenu.setOnClickListener {
+            CommonFunction().showSideMenu(it,requireActivity(),interstitialAds)
+        }
     }
 
     companion object {
@@ -130,7 +132,6 @@ class CategoriesFragment : Fragment() {
                 val intent = Intent(requireContext(), VideoPlayerActivity::class.java)
                 intent.putExtra("list", it)
                 interstitialAds.onStartOtherActivity(intent)
-//                startActivity(intent)
             }
         }
     }

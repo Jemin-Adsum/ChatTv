@@ -122,6 +122,7 @@ class InterstitialAds(var activity: Activity) {
     }
 
     fun onStartOtherActivity(intent: Intent) {
+        isFacebookAds = false
         ads_show_count = SaveSharedPreference(activity).getPreferences(activity)
             .getInt(Constants.ADS_SHOW_COUNT, 2)
         Log.e("COUNT","ads_show_count = $ads_show_count // clickCount = $clickCount")

@@ -16,6 +16,12 @@ class SaveSharedPreference(activity:Activity) {
         editor.apply()
     }
 
+    fun setPrivacyPolicy(context: Context, privacy_policy: String) {
+        val editor = getPreferences(context).edit()
+        editor.putString(Constants.PRIVACY_POLICY, privacy_policy)
+        editor.apply()
+    }
+
     fun setAds(
         context: Context,
         isAdsShow: Boolean,

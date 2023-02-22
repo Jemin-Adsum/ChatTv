@@ -4,6 +4,7 @@
     <string name="main_page_title">Home</string>
     <string name="favorite_page_title">Favorite</string>
     <string name="about_page_title">About us</string>
+    <string name="privacy_policy">Privacy Policy</string>
 
     <string name="info_file_select">You can import the list by selecting the m3u file.</string>
 
@@ -36,4 +37,7 @@
     <string name="search_your_country">Search your country</string>
     <string name="network_issue_message">Please check your network connection.</string>
     <string name="your_country_not_found">Your country not found.</string>
+
+    <string name="share_app_message">\nLet me recommend you this application\n\n</string>
+    <string name="play_store_link">https://play.google.com/store/apps/details?id=</string>
 </resources>
